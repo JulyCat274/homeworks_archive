@@ -4,5 +4,10 @@ students = {'Johnny', 'Bilbo', 'Steve', 'Khendrik', 'Aaron'}
 students_list = list(students)
 list.sort(students_list)
 students_dict = {}
-students_dict.update({students_list[0]: grades_average[0], students_list[1]: grades_average[1], students_list[2]: grades_average[2], students_list[3]: grades_average[3], students_list[4]: grades_average[4]})
+
+for n in range(5):
+	key = students_list[n]
+	value = grades_average[n]
+	students_dict[key] = value
+
 print(students_dict)
