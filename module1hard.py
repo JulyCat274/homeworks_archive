@@ -5,7 +5,8 @@ students_list = list(students)
 list.sort(students_list)
 students_dict = {}
 
-for n in range(5):
+number_of_students = len(students)
+for n in range(number_of_students):
 	key = students_list[n]
 	value = grades_average[n]
 	students_dict[key] = value
