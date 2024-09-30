@@ -1,9 +1,18 @@
 def custom_write(file_name, strings):
-    file_name = 'test.txt'
-    strings = []
+    strings_count = 0
+    file = open(file_name, 'w', encoding='utf-8')
+    for string in strings:
+        strings_count += 1
+        strings = (strings_count, file.tell())
+        file.write(f'{string}\n')
+        my_dict = {strings:string}
+        print(my_dict)
+    file.close()
+    file = open(file_name, 'r', encoding='utf-8')
+    result = file.read()
+    file.close()
 
 
-        #return result {strings_positions key:(<номер строки>, <байт начала строки>) value:записываемая строка}
 
 info = [
     'Text for tell.',
