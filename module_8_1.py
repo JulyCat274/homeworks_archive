@@ -1,5 +1,10 @@
 def add_everything_up(a, b):
-
+    try:
+        var = a + b
+    except:
+        return f'{a}{b}'
+    else:
+        return var
 
 
 print(add_everything_up(123.456, 'строка'))
